@@ -1,0 +1,97 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f3f4f6;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    width: 300px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transform: scale(0.8);
+    opacity: 0;
+    animation: fadeIn 0.4s forwards;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    border: none;
+    background: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: gray;
+}
+
+.close-btn:hover {
+    color: black;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+button {
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.yes-btn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.yes-btn:hover {
+    background-color: #45a049;
+}
+
+.no-btn {
+    background-color: #E53E3E;
+    color: white;
+}
+
+.no-btn:hover {
+    background-color: #C53030;
+}
+
+.message {
+    margin-top: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+}
