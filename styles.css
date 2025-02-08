@@ -82,6 +82,13 @@ button {
     transition: opacity 0.5s, transform 0.5s;
 }
 
+.gif_container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
 @keyframes fadeIn {
     to {
         opacity: 1;
