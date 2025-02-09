@@ -13,12 +13,22 @@ const prompts = [
 
 let promptIndex = 0;
 
-function handleNo() {
-    const btnNo = document.querySelector('.no-button');
-    const btnYes = document.querySelector('.yes-button');
-    btnNo.textContent = prompts[promptIndex];
-}
+document.addEventListener("DOMContentLoaded", function () {
+    const btnNo = document.getElementById("noButton");
+    const btnYes = document.getElementById("yesButton");
 
-function handleYes() {
-    window.location.href = "yes_page.html";
-}
+    if (btnNo) {
+        btnNo.addEventListener("click", function () {
+            if (promptIndex < prompts.length - 1) {
+                promptIndex++;
+            }
+            btnNo.textContent = prompts[promptIndex];
+        });
+    }
+
+    if (btnYes) {
+        btnYes.addEventListener("click", function () {
+            window.location.href = "yes_page.html";
+        });
+    }
+});
